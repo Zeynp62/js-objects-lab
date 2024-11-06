@@ -32,5 +32,20 @@ Solve Exercise 4 here:
 
 game.party.push(pokemon[24])
 
+/*
+Exercise 5
+*/
+game.party.push(pokemon[112], pokemon[39], pokemon[149])
+
+/*
+Exercise 6
+*/
+
+game.gyms.forEach((level) => {
+  if (level.difficulty < 3) {
+    level.completed = true
+  }
+})
+
 console.log(game)
 // console.dir(pokemon, { maxArrayLength: null })
