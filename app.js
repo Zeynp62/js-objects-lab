@@ -16,7 +16,15 @@ const game = {
     { name: 'potion', quantity: 4 },
     { name: 'pokeball', quantity: 8 },
     { name: 'rare candy', quantity: 99 }
-  ]
+  ],
+  gymStatus() {
+    gymTally: [
+      {
+        completed: 0,
+        incomplete: 0
+      }
+    ]
+  }
 }
 
 /*
@@ -77,10 +85,10 @@ for (let i = 0; i < pokemon.length; i++) {
 Exercise 10
 Solve Exercise 10 here:
 */
-// game.catchPokemon = function (pokemonObj) {
-//   game.party.push(pokemonObj)
-// }
-// game.catchPokemon(pokemon[88])
+game.catchPokemon = function (pokemonObj) {
+  game.party.push(pokemonObj)
+}
+game.catchPokemon(pokemon[88])
 
 /*
 Exercise 11
@@ -90,7 +98,22 @@ game.catchPokemon = function (pokemonObj) {
   game.party.push(pokemonObj)
   game.items[1].quantity -= 1
 }
-game.catchPokemon(pokemon[88])
-console.log(game)
+game.catchPokemon(pokemon[90])
 
+/*
+Exercise 12
+Solve Exercise 12 here:
+*/
+game.gyms.forEach((level) => {
+  if (level.difficulty < 6) {
+    level.completed = true
+  }
+})
+
+/*
+Exercise 13
+Solve Exercise 13 here:
+*/
+
+console.log(game)
 // console.dir(pokemon, { maxArrayLength: null })
