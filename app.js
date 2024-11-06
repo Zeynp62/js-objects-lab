@@ -47,5 +47,10 @@ game.gyms.forEach((level) => {
   }
 })
 
+/*
+Exercise 7
+Solve Exercise 7 here:
+*/
+game.party[0] = pokemon[25]
 console.log(game)
 // console.dir(pokemon, { maxArrayLength: null })
