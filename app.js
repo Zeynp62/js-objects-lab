@@ -35,7 +35,10 @@ game.party.push(pokemon[24])
 /*
 Exercise 5
 */
-game.party.push(pokemon[112], pokemon[39], pokemon[149])
+//game.party.push(pokemon[112], pokemon[39], pokemon[149])
+game.party.push(pokemon[112])
+game.party.push(pokemon[39])
+game.party.push(pokemon[149])
 
 /*
 Exercise 6
@@ -51,6 +54,25 @@ game.gyms.forEach((level) => {
 Exercise 7
 Solve Exercise 7 here:
 */
-game.party[0] = pokemon[25]
+//solution without solice: game.party[0] = pokemon[25]
+game.party.splice(0, 1, pokemon[25])
+
 console.log(game)
+
+/*
+Exercise 8
+*/
+for (let i = 0; i < game.party.length; i++) {
+  console.log(game.party[i].name)
+}
+
+/*
+Exercise 9
+*/
+for (let i = 0; i < pokemon.length; i++) {
+  if (pokemon.starter === true) {
+    console.log(pokemon.name)
+  }
+}
+
 // console.dir(pokemon, { maxArrayLength: null })
