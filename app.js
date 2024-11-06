@@ -56,12 +56,10 @@ Solve Exercise 7 here:
 */
 //solution without solice: game.party[0] = pokemon[25]
 game.party.splice(0, 1, pokemon[25])
-
-console.log(game)
-
 /*
 Exercise 8
 */
+console.log('Q8 result:------------------')
 for (let i = 0; i < game.party.length; i++) {
   console.log(game.party[i].name)
 }
@@ -69,10 +67,30 @@ for (let i = 0; i < game.party.length; i++) {
 /*
 Exercise 9
 */
+console.log('Q9 result:------------------')
 for (let i = 0; i < pokemon.length; i++) {
-  if (pokemon.starter === true) {
-    console.log(pokemon.name)
+  if (pokemon[i].starter === true) {
+    console.log(pokemon[i].name)
   }
 }
+/*
+Exercise 10
+Solve Exercise 10 here:
+*/
+// game.catchPokemon = function (pokemonObj) {
+//   game.party.push(pokemonObj)
+// }
+// game.catchPokemon(pokemon[88])
+
+/*
+Exercise 11
+Solve Exercise 11 here:
+*/
+game.catchPokemon = function (pokemonObj) {
+  game.party.push(pokemonObj)
+  game.items[1].quantity -= 1
+}
+game.catchPokemon(pokemon[88])
+console.log(game)
 
 // console.dir(pokemon, { maxArrayLength: null })
