@@ -18,12 +18,22 @@ const game = {
     { name: 'rare candy', quantity: 99 }
   ],
   gymStatus() {
-    gymTally: [
-      {
-        completed: 0,
-        incomplete: 0
+    const gymTally = {
+      completed: 0,
+      incomplete: 0
+    }
+    game.gyms.forEach((gym) => {
+      if (gym.completed === true) {
+        gymTally.completed += 1
+      } else {
+        gymTally.incomplete += 1
       }
-    ]
+    })
+
+    console.log(gymTally)
+  },
+  partyCount() {
+    return game.party.length
   }
 }
 
@@ -115,5 +125,14 @@ Exercise 13
 Solve Exercise 13 here:
 */
 
-console.log(game)
+console.log('answer Q13:')
+console.log(game.gymStatus())
 // console.dir(pokemon, { maxArrayLength: null })
+
+/*
+Exercise 14
+Solve Exercise 14 here:
+*/
+console.log('answer Q14:')
+console.log(game.partyCount())
+console.log(game)
