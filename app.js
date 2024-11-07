@@ -135,4 +135,19 @@ Solve Exercise 14 here:
 */
 console.log('answer Q14:')
 console.log(game.partyCount())
+
+/*
+Exercise 15
+Solve Exercise 15 here:
+*/
+game.gyms.forEach((level) => {
+  if (level.difficulty < 8) {
+    level.completed = true
+  }
+})
+/*
+Exercise 16
+Solve Exercise 16 here:
+*/
+
 console.log(game)
